@@ -1,16 +1,31 @@
-# This is a sample Python script.
+from flask import Flask
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from utils import load_json, get_all_candidates, format_candidates, get_candidate_by_id, get_candidate_by_skill
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+app = Flask(__name__)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+@app.route('/')
+def page_main():
+    candidates: list[dict] = get_all_candidates()
+    result: str = format_candidates(candidates)
+    return result
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+@app.route('/candidate/<int:uid>')
+def page_candidate(uid):
+    candidate: dict = get_candidate_by_id(uid)
+    result = '<img src="{candidate["picture"]}">'
+    result += format_candidates([candidate])
+    return result
+
+
+@app.route('/skills/<skill>')
+def page_skills(skill):
+    skill_lower = skill.lower()
+    candidates: list[dict] = get_candidate_by_skill(skill_lower)
+    result = format_candidates(candidates)
+    return result
+
+
+app.run()
