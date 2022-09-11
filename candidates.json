@@ -2,7 +2,7 @@
 
 [
   {
-    "pk": 1,
+    "id": 1,
     "name": "Adela Hendricks",
     "picture": "https://picsum.photos/200",
     "position": "Go разработчик",
@@ -11,7 +11,7 @@
     "skills": "go, python"
   },
   {
-    "pk": 2,
+    "id": 2,
     "name": "Sheri Torres",
     "picture": "https://picsum.photos/200",
     "position": "Delphi developer",
@@ -20,7 +20,7 @@
     "skills": "Delphi, pascal, fortran, basic"
   },
   {
-    "pk": 3,
+    "id": 3,
     "name": "Burt Stein",
     "picture": "https://picsum.photos/200",
     "position": "Team lead",
@@ -29,7 +29,7 @@
     "skills": "делегирование, пользоваться календарем, обсуждать важные вопросы"
   },
   {
-    "pk": 4,
+    "id": 4,
     "name": "Bauer Adkins",
     "picture": "https://picsum.photos/200",
     "position": "CTO",
@@ -38,7 +38,7 @@
     "skills": "very important face"
   },
   {
-    "pk": 5,
+    "id": 5,
     "name": "Day Holloway",
     "picture": "https://picsum.photos/200",
     "position": "HR manager",
@@ -47,7 +47,7 @@
     "skills": "LinkedIn, telegram, spam, spam, spam"
   },
   {
-    "pk": 6,
+    "id": 6,
     "name": "Austin Cochran",
     "picture": "https://picsum.photos/200",
     "position": "python-develop",
@@ -56,7 +56,7 @@
     "skills": "python, html"
   },
   {
-    "pk": 7,
+    "id": 7,
     "name": "Sheree Love",
     "picture": "https://picsum.photos/200",
     "position": "Django developer",
